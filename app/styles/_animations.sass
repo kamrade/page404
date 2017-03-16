@@ -1,0 +1,97 @@
+// animation
+random(val)
+  return math(math(0, 'random') * val + 1, 'floor')
+
+@keyframes is-off
+  0%
+    opacity: 1
+  50%
+    opacity: 1
+  56%
+    opacity: 0.8
+  57%
+    opacity: 0.8
+  58%
+    opacity: 1
+  71%
+    transform: scaleY(1) skewX(0deg)
+  72%
+    transform: scaleY(1.1) skewX(-7deg)
+  73%
+    transform: scaleY(1) skewX(0deg)
+  80%
+    opacity: 1
+  81%
+    opacity: 1
+  84%
+    opacity: 1
+  85%
+    opacity: 1
+  91%
+    transform: scaleX(1) scaleY(1) skewX(0deg)
+    color: $txt-color
+  92%
+    transform: scaleX(1.25) scaleY(.72) skewX(8deg)
+    color: green
+  93%
+    transform: scaleX(1) scaleY(1) skewX(0deg)
+    color: $txt-color
+
+// помехи
+@keyframes c1
+  @for $i from 0 through 10
+    #{$i*(1/20)*10*10%}
+        clip: rect( random(100) + px, 9999px, random(100) + px, 0)
+    50%
+        clip: rect( 100px, 9999px, 100px, 0)
+    100%
+        clip: rect( 100px, 9999px, 100px, 0)
+
+// помехи
+@keyframes c2
+  @for $i from 0 through 20
+    #{$i*(1/20)*10*10%}
+      clip: rect( random(100) + px, 9999px, random(100) + px, 0)
+  23%
+    transform: scaleX(.95)
+
+// text annimation
+@keyframes clock-bag
+  @for $i from 0 through 50
+    #{$i*(1/50)*10*10%}
+      transform: translate(random(5) + px, random(5) + px)
+  1%
+    transform: scaleY(1) skewX(0deg)
+  1.5%
+    transform: scaleY(1.3) skewX(-5deg)
+  2%
+    transform: scaleY(1) skewX(0deg)
+  51%
+    transform: scaleX(1) scaleY(1) skewX(0deg)
+  52%
+    transform: scaleX(1.15) scaleY(.72) skewX(8deg)
+  53%
+    transform: scaleX(1) scaleY(1) skewX(0deg)
+
+@keyframes tr-bag
+  @for $i from 0 through 50
+    #{$i*(1/50)*10*10%}
+      transform: translate(random(5) + px, random(5) + px)
+  1%
+    transform: scaleY(1) skewX(0deg)
+  1.5%
+    transform: scaleY(1.13) skewX(-7deg)
+  2%
+    transform: scaleY(1) skewX(0deg)
+  51%
+    transform: scaleX(1) scaleY(1) skewX(0deg)
+  52%
+    transform: scaleX(1.15) scaleY(.82) skewX(8deg)
+  53%
+    transform: scaleX(1) scaleY(1) skewX(0deg)
+
+@keyframes bg-move
+  0%
+    background-position: 0 0
+  100%
+    background-position: 0 -32px

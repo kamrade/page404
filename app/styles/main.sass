@@ -1,0 +1,73 @@
+@import 'settings'
+@import 'animations'
+@import 'page'
+@import 'bg'
+@import 'switcher'
+
+.figure
+    display: block
+    position: absolute
+    z-index: 1
+    width:  0
+    height: 0
+    top:    0
+    right:  0
+    bottom: 0
+    left:   20px
+    margin: auto
+    border-bottom: 200px solid rgba(red, 0.61)
+    border-right: 100px solid transparent
+    border-left: 100px solid transparent
+    border-top: 0 solid transparent
+    &:before
+        display: block
+        content: ''
+        position: absolute
+        z-index: 99
+        width:  0
+        height: 0
+        // top: -194px
+        top: 15px
+        left: -90px
+        margin: auto
+        border-bottom: 180px solid $bg-color
+        border-right: 90px solid transparent
+        border-left: 90px solid transparent
+        border-top: 0 solid transparent
+
+.figure-mask
+    display: block
+    position: absolute
+    z-index: 99
+    width:  0
+    height: 0
+    top:    0
+    right:  0
+    bottom: 0
+    left:   0
+    margin: auto
+    border-bottom:   200px solid transparent
+    border-right:    100px solid $bg-color
+    border-left:     100px solid $bg-color
+    border-top:      0 solid transparent
+
+.clock
+    display: block
+    position: absolute
+    z-index: 9
+    width:  720px
+    height: 128px
+    text-align: center
+    top:    0
+    right:  0
+    bottom: 0
+    left:   0
+    margin: auto
+    cursor: default
+    span
+        display: block
+        position: relative
+        font-size: 144px
+        line-height: 1
+    &.is-off
+        animation: is-off 8s linear infinite !important

@@ -1,0 +1,27 @@
+/* config */
+$colors: (
+  'primary': #24242e,
+  'secondary': #6e756d,
+  'light': #eafce3,
+  'dark': #222,
+  'accent': #fd705f,
+  'accent-good': #427f3e
+);
+
+
+/* functions */
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+$bg-color: #fff;
+$txt-color: #333A3F;
+
+$color-c1: red;
+$color-c2: blue;
+
+$offset-c1: 3;
+$offset-c2: 2;
+
+$lay-c1: 2;
+$lay-c2: 2;
