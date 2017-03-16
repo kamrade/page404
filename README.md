@@ -1,7 +1,7 @@
-# very-base-gulp-project
-version 0.2.2
+# page 404
+version 0.1.1
 
-For testing and styling purposes
+Funny 404 page on animations and rect masks
 
 npm install
 gulp
